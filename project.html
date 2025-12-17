@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sakshi — Digital Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#7c3aed; /* purple */
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, var(--bg) 0%, #071021 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:40px 24px;
+    }
+
+    /* container */
+    .wrap{max-width:1000px;margin:0 auto}
+
+    header{
+      display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;
+    }
+    .logo{display:flex;gap:12px;align-items:center}
+    .avatar{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:white;
+      box-shadow:0 6px 18px rgba(124,58,237,0.18);
+    }
+    nav{display:flex;gap:14px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start;margin-bottom:28px}
+    .card{background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .intro h1{margin:0 0 6px;font-size:28px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta{margin-top:16px;display:flex;gap:10px}
+    .btn{padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);border:none;color:white;font-weight:700;cursor:pointer}
+    .btn--ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* profile side */
+    .profile{display:flex;flex-direction:column;gap:12px}
+    .meta{display:flex;flex-direction:column;gap:6px}
+    .meta div{color:var(--muted);font-size:14px}
+
+    /* sections */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;font-weight:600;color:var(--muted)}
+
+    .projects .project{display:flex;flex-direction:column;gap:8px;padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px}
+    .project h4{margin:0}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+    }
+
+    /* small utility */
+    .tag{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700;color:var(--muted)}
+    a.link{color:var(--accent);text-decoration:none;font-weight:700}
+
+    /* contact form */
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:100px}
+
+    /* subtle animations */
+    .avatar, .card{transition:transform .28s ease, box-shadow .28s ease}
+    .card:hover{transform:translateY(-6px)}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <div class="avatar">ST</div>
+        <div>
+          <div style="font-weight:700">Sakshi Tripathi</div>
+          <div style="font-size:13px;color:var(--muted)">btech 1st year  • AI Enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+   
+    
+    <section class="hero">
+      <div class="card intro">
+        <h1>Hello — I'm Sakshi</h1>
+        <p>Student of btech 1st year at ABES Engineering College. Focused  to improve teamwork, communication, and leadership skills to manage future engineering teams.
+
+To take responsibility for leading projects, guiding juniors, and improving project management abilities.</p>
+
+        <div class="cta">
+          <a href="#projects" class="btn">See Projects</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+
+        
+
+        <div style="margin-top:18px;" class="tag">Favourite book: The Secret</div>
+      </div>
+
+      <div class="card profile">
+      <img src="photo.jpeg" class="profile-img" alt="Sakshi" />
+      <div class="meta">
+        <div>Age: 18</div>
+        <div>College: ABES Engineering College</div>
+        <div>Location: Greater Noida</div>
+      </div>
+    </div>
+  </section>
+
+      <aside class="card profile">
+        <div class="meta">
+          <div><strong>Age:</strong> 18</div>
+          <div><strong>School:</strong> ABES ENGINEERING COLLEGE</div>
+          <div><strong>Location:</strong> Noida</div>
+        </div>
+
+        <div style="margin-top:6px">
+          <div style="font-weight:700;margin-bottom:6px">Contact</div>
+          <div class="meta">
+            <div>Email: <a class="link" href="mailto:SAKSHITRIPATHI1914@gmail.com">SAKSHITRIPATHI1914@gmail.com</a></div>
+            <div>Phone: +91 9XXXXXXXXX</div>
+          </div>
+        </div>
+
+        <div style="margin-top:8px">
+          <div style="font-weight:700;margin-bottom:6px">Quick Links</div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a class="tag" href="#projects">Projects</a>
+            <a class="tag" href="#skills">Skills</a>
+            <a class="tag" href="#contact">Hire Me</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="card" style="margin-bottom:18px">
+      <h3 style="margin-top:0">About Me</h3>
+      <p style="margin:6px 0;color:var(--muted)">I enjoy solving problems, learning algorithms, and building small AI projects. I have completed the first unit on AI project cycle and worked on a robot design using 3D Paint. I participate in quizzes like the Green Olympiad and focus on improving my fundamentals for competitive exams.</p>
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <h3 style="margin-top:0">Skills</h3>
+        <div id="skills" class="skills" style="margin-top:8px">
+          <span class="skill">Artificial Intelligence</span>
+          <span class="skill">Python (basics)</span>
+          <span class="skill">C++</span>
+          <span class="skill">HTML & CSS</span>
+          <span class="skill">Problem Solving</span>
+          <span class="skill">MS Office</span>
+        </div>
+
+        <h4 style="margin-top:16px">Strengths</h4>
+        <ul style="color:var(--muted);margin:6px 0 0 18px">
+          <li>Hard-working & disciplined</li>
+          <li>Strong mathematical foundation</li>
+          <li>Curious & quick learner</li>
+        </ul>
+      </div>
+
+      <div class="card projects">
+        <h3 style="margin-top:0">Projects</h3>
+
+        <div class="project">
+          <h4>Robot Design (AI Project)</h4>
+          <p>Designed a robot in 3D Paint. Features: object detection, voice control, navigation, safety alerts, energy efficiency.</p>
+        </div>
+
+        <div class="project">
+          <h4>Science Country Profile</h4>
+          <p>Comparative project on India, Japan & Singapore — nutrition, healthcare, traditional meals, health campaigns and map work.</p>
+        </div>
+
+        <div class="project">
+          <h4>NCERT Polynomials (Math)</h4>
+          <p>Completed Exercise 2.4 and solved polynomial problems with step-by-step solutions.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h3 style="margin-top:0">Contact Me</h3>
+      <p style="margin:6px 0;color:var(--muted)">Want this portfolio as a printable PDF or PPT? Or want me to customize the sections, colors, or add more projects — tell me below.</p>
+
+      <form onsubmit="event.preventDefault(); alert('Form demo — replace with your backend or mailto link');">
+        <input placeholder="Your name" required />
+        <input type="email" placeholder="Your email" required />
+        <textarea placeholder="Message"></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      Built with ♥ • © Sakshi Tripathi
+    </footer>
+  </div>
+</body>
+</html>
